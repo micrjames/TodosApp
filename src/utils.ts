@@ -1,4 +1,6 @@
 import { routeIter } from "./routes/routeIter.js";
+import path from "path";
+import url from "url";
 
 export const utils = {
    getDefaultRegexp : (...routes: routeIter[][]): RegExp => {
@@ -16,5 +18,6 @@ export const utils = {
 	  regexpStr += ")]";
 	  
 	  return new RegExp(regexpStr);
-   }
+   },
+   __dirname : path.dirname(url.fileURLToPath(import.meta.url))
 };
