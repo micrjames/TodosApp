@@ -87,3 +87,26 @@ a:link {
 a:hover {
 	background-color: hsl(0, 0%, 15%);
 }
+footer {
+  background-color: hsl(0, 0%, 25%);
+  font-size: 1.15rem;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.95rem;
+
+  border-top: 1px solid grey;
+}
+footer #link-text a {
+  margin: 0 1.5rem;
+  font-size: 1.15rem;
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+}
+footer #copyright-info {
+  font-size: 1rem;
+}
