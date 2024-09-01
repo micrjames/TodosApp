@@ -3,38 +3,9 @@
 	<%-include("./partials/head.ejs");%>
 	<body>
 		<main id="main-wrapper">
-		   <section id="todos-wrapper">
-			   <table>
-				  <caption>Todos</caption>
-				  <tr>
-					 <th>title</th>
-					 <th>description</th>
-					 <th>completed</th>
-				  </tr>
-				  <tr>
-					 <td>Coding in Javascript</td>
-					 <td>Working with functions in JS</td>
-					 <td>false</td>
-				  </tr>
-				  <tr>
-					 <td>Cooking Supper</td>
-					 <td>Preparing rice and chicken</td>
-					 <td>false</td>
-				  </tr>
-				  <tr>
-					 <td>Taking a walk</td>
-					 <td>Easy time at the park</td>
-					 <td>false</td>
-				  </tr>
-				  <tr>
-					 <td>Watching Netflix</td>
-					 <td>Enjoying the new premiered series</td>
-					 <td>false</td>
-				  </tr>
-			   </table>
-		   </section>
-		   <a id="return_btn" href="/">go to home page</a>
+		   <%-include("./partials/todos.ejs");%>
+		   <%-include("./partials/back_btn.ejs");%>
 		</main>
+	    <%-include("./partials/footer.ejs");%>
 	</body>
-	<%-include("./partials/footer.ejs");%>
 </html>

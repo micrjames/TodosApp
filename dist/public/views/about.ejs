@@ -3,11 +3,11 @@
 	<%-include("./partials/head.ejs");%>
 	<body>
 		<main id="main-wrapper">
-		   <h1>About Todos</h1>
-		   <h3>Create, Read, Update, or Delete Todos</h3>
-		   <h5>&#169; 2024 Michael</h5>
-		   <a id="return_btn" href="/">go to home page</a>
+		   <h1><%=title%></h1>
+		   <h3><%=text%></h3>
+		   <h5>&#169;<%=post%></h5>
+		   <%-include("./partials/back_btn.ejs");%>
 		</main>
+	    <%-include("./partials/footer.ejs");%>
 	</body>
-	<%-include("./partials/footer.ejs");%>
 </html>
