@@ -4,7 +4,6 @@ import { utils } from "../utils.js";
 
 export const home = {
    getIndex: (_: Request, res: Response) => {
-	  // res.render("index.ejs");
-	  res.status(200).sendFile(path.resolve(utils.__dirname, "./public/main.html"));
+	  res.status(200).render(path.resolve(utils.__dirname, "./public/views/home.ejs"));
    }
 };  

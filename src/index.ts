@@ -11,7 +11,7 @@ dotenv.config();
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
-// app.set("view engine", "ejs");
+app.set("view engine", "ejs");
 app.use(cors({ origin: `http://localhost:${PORT}`  }));
 app.use(express.static(path.join(utils.__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
