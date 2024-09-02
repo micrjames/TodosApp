@@ -1,39 +1,45 @@
-* {
-	padding: 0;
-	margin: 0;
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0, 0%, 25%);
+}
+
+.hidden {
+  display: none;
 }
 
 #oops-wrapper {
-	font-size: 2rem;
-	background-color: hsl(0, 0%, 25%);
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-	margin: 10%;
+#oops-wrapper {
+  font-size: 2rem;
+  background-color: hsl(0, 0%, 25%);
+  align-items: center;
+  height: 100vh;
+}
+#oops-wrapper h1 {
+  margin: 10%;
+}
+#oops-wrapper h5 {
+  margin: 5%;
+}
+#oops-wrapper #return_btn {
+  margin-top: 25%;
+}
+#oops-wrapper a {
+  color: dimgray;
+}
+#oops-wrapper a:link {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid black;
+  padding: 5px;
+}
+#oops-wrapper a:hover {
+  background-color: hsl(0, 0%, 15%);
 }
 
-h5 {
-	margin: 5%;
-}
-
-#return_btn {
-   margin-top: 25%;
-}
-a {
-   color: dimgray;
-}
-a:link {
-	text-decoration: none;
-	color: inherit;
-	border: 1px solid black;
-	padding: 5px;
-}
-a:hover {
-	background-color: hsl(0, 0%, 15%);
-}
+/*# sourceMappingURL=oops_main.css.map */

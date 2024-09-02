@@ -1,0 +1,27 @@
+%table {
+   border-collapse: collapse;
+   width: 100%;
+   text-align: center;
+   background-color: lightgray;
+   border: 1px solid black;
+
+   caption {
+	  padding: 20px 0;
+   }
+   th {
+	  background-color: gray;
+	  padding: 0 20px;
+	  border-bottom: 5px solid black;
+   }
+   tr {
+	  border-right: 1px sold black;
+	  border-left: 1px solid black;
+	  border-bottom: 1px solid black;
+   }
+   tr, td {
+	  font-size: 75%;
+   }
+   tr:nth-child(odd) {
+	  background-color: gray;
+   }
+}

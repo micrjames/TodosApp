@@ -1,0 +1,45 @@
+@import 'todos', '../../utils/utils';
+
+@mixin main-container($bg-color) {
+   font-size: 2rem;
+   background-color: $bg-color;
+
+   @extend %flex;
+   align-items: center;
+
+   height: 100vh;
+
+   h1 {
+	   margin: 10%;
+	   font-size: 1.75rem;
+   }
+   h3 {
+	  margin: 5%;
+   }
+   h5 {
+	  margin: 5%;
+   }
+
+   #todos-wrapper {
+	  @extend %todos;
+   }
+   #button-wrapper {
+	  margin: 20px;
+   }
+
+   section+#return_btn {
+	  margin-top: 10%;
+   }
+   a {
+	  color: dimgray;
+	  &:link {
+		  text-decoration: none;
+		  color: inherit;
+		  border: 1px solid black;
+		  padding: 5px;
+	  }
+	  &:hover {
+		  background-color: hsl(0, 0%, 15%);
+	  }
+   }
+}

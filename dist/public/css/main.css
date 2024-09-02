@@ -1,101 +1,106 @@
-html {
-	font-size: 100%;
-	box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0, 0%, 25%);
 }
 
-*, *::before, *::after {
-	box-sizing: inherit;
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main #todos-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: lightgray;
+  border: 1px solid black;
+}
+main #todos-wrapper table caption {
+  padding: 20px 0;
+}
+main #todos-wrapper table th {
+  background-color: gray;
+  padding: 0 20px;
+  border-bottom: 5px solid black;
+}
+main #todos-wrapper table tr {
+  border-right: 1px sold black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+main #todos-wrapper table tr, main #todos-wrapper table td {
+  font-size: 75%;
+}
+main #todos-wrapper table tr:nth-child(odd) {
+  background-color: gray;
+}
+
+main #todos-wrapper {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 .completed {
-   text-decoration: line-through;
-   color: gray;
+  text-decoration: line-through;
+  color: gray;
 }
 
 .not {
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	background-color: hsl(0, 0%, 25%);
+main {
+  font-size: 2rem;
+  background-color: hsl(0, 0%, 25%);
+  align-items: center;
+  height: 100vh;
 }
-#main-wrapper {
-	font-size: 2rem;
-	background-color: hsl(0, 0%, 25%);
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	height: 100vh;
+main h1 {
+  margin: 10%;
+  font-size: 1.75rem;
 }
-#todos-wrapper {
-   width: 75%;
-   height: 75%;
-   display: flex;
-   justify-content: center;
-   padding-top: 2rem;
+main h3 {
+  margin: 5%;
 }
-table {
-   border-collapse: collapse;
-   width: 100%;
-   text-align: center;
-   background-color: lightgray;
+main h5 {
+  margin: 5%;
 }
-caption {
-   padding: 20px 0;
+main #button-wrapper {
+  margin: 20px;
 }
-th {
-   background-color: gray;
-   padding: 0 20px;
-   border-bottom: 5px solid black;
+main section + #return_btn {
+  margin-top: 10%;
 }
-tr {
-   border-right: 1px sold black;
-   border-left: 1px solid black;
-   border-bottom: 1px solid black;
+main a {
+  color: dimgray;
 }
-tr, td {
-   font-size: 75%;
+main a:link {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid black;
+  padding: 5px;
 }
-tr:nth-child(odd) {
-   background-color: gray;
-}
-h1 {
-	margin: 10%;
-	font-size: 1.75rem;
-}
-h3 {
-   margin: 5%;
-}
-h5 {
-   margin: 5%;
+main a:hover {
+  background-color: hsl(0, 0%, 15%);
 }
 
-#button-wrapper {
-   margin: 20px;
-}
-
-section+#return_btn {
-   margin-top: 10%;
-}
-#return_btn {
-   margin-top: 25%;
-}
-a {
-   color: dimgray;
-}
-a:link {
-	text-decoration: none;
-	color: inherit;
-	border: 1px solid black;
-	padding: 5px;
-}
-a:hover {
-	background-color: hsl(0, 0%, 15%);
-}
 footer {
   background-color: hsl(0, 0%, 25%);
   font-size: 1.15rem;
@@ -105,7 +110,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0.95rem;
-
   border-top: 1px solid grey;
 }
 footer #link-text a {
@@ -119,3 +123,5 @@ footer #link-text a {
 footer #copyright-info {
   font-size: 1rem;
 }
+
+/*# sourceMappingURL=main.css.map */

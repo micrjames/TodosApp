@@ -1,0 +1,27 @@
+@import '../utils/utils';
+
+@mixin ftr-bar($background-color) {
+   background-color: $background-color;
+   font-size: 1.15rem;
+   width: 100vw;
+   position: fixed;
+   bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   padding: 0.95rem;
+ 
+   border-top: 1px solid grey;
+ 
+   #link-text a {
+	  margin: 0 1.5rem;
+      font-size: 1.15rem;
+      color: grey;
+      text-decoration: underline;
+      cursor: pointer;
+      border: none;
+  }
+ 
+  #copyright-info {
+     font-size: 1rem;
+  }
+}

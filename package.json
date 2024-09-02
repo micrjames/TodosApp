@@ -8,10 +8,11 @@
       "test": "tests"
    },
    "scripts": {
+	  "compile:sass": "sass src/scss:dist/public/css",
       "prestart": "npx tsc && cp -R ./src/views ./dist/public",
       "start": "nodemon dist/index.js",
       "test": "jest",
-	  "clean": "cd ./dist && rm -rf $(ls | grep '[^./public]') && rm -rf ./public/views"
+      "clean": "cd ./dist && rm -rf $(ls | grep '[^./public]') && rm -rf ./public/views"
    },
    "keywords": [
       "webpack",
@@ -26,6 +27,7 @@
       "@types/node": "^22.5.1",
       "jest": "^29.7.0",
       "nodemon": "^3.1.4",
+      "sass": "^1.77.8",
       "typescript": "^5.5.4"
    },
    "dependencies": {

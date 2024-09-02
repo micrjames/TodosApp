@@ -1,0 +1,16 @@
+@import 'utils/config', 'parts/ftr-bar', 'parts/sections/main-container';
+.completed {
+   text-decoration: line-through;
+   color: gray;
+}
+
+.not {
+   text-decoration: underline;
+}
+
+main {
+   @include main-container($main-bg-color);
+}
+footer {
+    @include ftr-bar($footer-color);
+}
