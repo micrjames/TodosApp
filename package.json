@@ -8,9 +8,10 @@
       "test": "tests"
    },
    "scripts": {
-      "prestart": "npx tsc",
+      "prestart": "npx tsc && cp -R ./src/views ./dist/public",
       "start": "nodemon dist/index.js",
-      "test": "jest"
+      "test": "jest",
+	  "clean": "cd ./dist && rm -rf $(ls | grep '[^./public]') && rm -rf ./public/views"
    },
    "keywords": [
       "webpack",
