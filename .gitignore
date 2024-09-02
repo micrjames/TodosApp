@@ -4,3 +4,4 @@ dist/*.js
 dist/controllers
 dist/data
 dist/routes
+dist/public/views
