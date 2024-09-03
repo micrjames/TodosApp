@@ -1,0 +1,28 @@
+<form id="login-form" class="hidden" name="login-form">
+ <fieldset>
+	<%forms.login.forEach(formControl => {%>
+	<span id="form-control">
+	   <label for=<%=formControl.label.for%>><%=formControl.label.text%></label>
+	   <input
+		  id=<%=formControl.input.id%>
+		  name=<%=formControl.input.name%>
+		  type=<%=formControl.input.type%>
+		  pattern=<%=formControl.input.pattern%>
+		  placeholder="<%=formControl.input.placeholder%>"
+	   >
+	   <ul class="error-message">
+		  <%formControl.errs.forEach(err => {%>
+			 <li><%=err.msg%></li>
+		  <%})%>
+	   </ul>
+	</span>
+	<hr>                                                         
+	<%})%>
+	<span id="form-control-hidden"></span>
+	<hr>
+	<div id="form-btn-group">
+	   <input class="btn" id="form-btn-group-reset" type="reset">
+	   <input class="btn" id="form-btn-group-btn" type="submit" value="Submit">
+	</div>
+ </fieldset>
+</form>

@@ -194,7 +194,7 @@ main #signup-login #signup-form #form-control-hidden {
 }
 main #signup-login #signup-form #form-btn-group {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(4, 25%);
 }
 main #signup-login #signup-form #form-btn-group .btn {
   display: inline-block;
@@ -277,7 +277,7 @@ main #signup-login #login-form #form-control-hidden {
 }
 main #signup-login #login-form #form-btn-group {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(4, 25%);
 }
 main #signup-login #login-form #form-btn-group .btn {
   display: inline-block;
