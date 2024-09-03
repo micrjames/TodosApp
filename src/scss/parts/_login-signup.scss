@@ -1,0 +1,80 @@
+@import '../utils/utils', '../utils/button';
+
+@mixin l-s($width, $bg-color, $text-color: white, $error-color: red, $font-size: 1.75rem) {
+    background-color: lighten($bg-color, 20%);
+    width: $width;
+	color: $text-color;
+	font-size: $font-size;
+
+	#form-control {
+	   font-size: 80%; 
+	   padding: 1rem 0.5rem;
+	   display: grid;
+	   grid-template-columns: repeat(4, 25%);
+	   grid-template-rows: repeat(3, auto);
+
+	   align-items: center;
+
+	   label {
+		   grid-column: 1 / 2;
+		   text-align: center;
+	   }
+	   input[type=text], input[type=password], input[type=email] {
+		   grid-column: 2 / -1;
+		   background-color: lighten($bg-color, 30%);
+		   outline: none;
+		   outline-style:none;
+		   padding: 0.5rem;
+		   font-size: 85%;
+		   color: white;
+		   &::placeholder {
+			   color: $text-color;
+		   }
+		   &:focus {
+			  color: $text-color;
+			  caret-color: $text-color;
+		   }
+		   &:invalid {
+			  border-color: $error-color;
+			  color: $error-color;
+
+			  & ~ .error-message {
+				  display: block;
+			  }
+		   }
+	   }
+	   .error-message {
+		  grid-column: 2 / -1;
+		  display: none;
+		  font-size: 85%;
+		  color: $error-color;
+		  margin-top: 0.5rem;
+		  font-style: italic;
+		  list-style-position: inside;
+
+		  li {
+			  margin: 0.75rem 0;
+		  }
+	   }
+	}
+	#form-control-hidden {
+	   display: block;
+	   width: 100%;
+	   height: 232px;
+	}
+	#form-btn-group {
+	   display: grid;
+	   grid-template-columns: repeat(2, 50%);
+	   .btn {
+		   @include button(70%, 0.9rem 1.2rem, 0, 1px solid black);
+		   background-color: darken($bg-color, 15%);
+		   border-radius: 0;
+	   }
+	   &-reset {
+		   grid-column: 1 / 3;
+	   }
+	   &-btn {
+		   grid-column: 3 / -1;
+	   }
+	}
+}

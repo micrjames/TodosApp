@@ -1,0 +1,16 @@
+const body = document.body;
+const main = body.firstElementChild;
+
+const signupLoginErrMsg = main?.children.namedItem("signup-login-error-message");
+
+const signupLogin = main?.children.namedItem("signup-login");
+const signupLoginHdr = signupLogin?.children.namedItem("signup-login-hdr");
+const signupLoginHdrBtnGroup = signupLoginHdr?.children.namedItem("signup-login-hdr-btn-group");
+
+const loginToggleBtn = signupLoginHdrBtnGroup?.children[0];
+const signupToggleBtn = signupLoginHdrBtnGroup?.children[1];
+
+const signupForm = document.forms[0];
+const loginForm = document.forms[1];
+
+export { loginForm, signupForm, loginToggleBtn, signupToggleBtn, signupLoginErrMsg };

@@ -1,0 +1,63 @@
+<p id="signup-login-error-message"></p>
+<section id="signup-login">
+  <header id="signup-login-hdr">
+	   <div id="signup-login-hdr-btn-group">
+		  <button class="btn" id="signup-login-hdr-btn-group-login">
+			  Login
+		  </button>
+		  <button class="btn" id="signup-login-hdr-btn-group-signup">
+			  Signup
+		  </button>
+	   </div>
+  </header>
+ <form id="signup-form" name="signup-form">
+	<fieldset>
+	   <span id="form-control">
+		  <label for="signup-form-name">Name</label>
+		  <input
+			  id="signup-form-name"
+			  name="name"
+			  type="text"
+			  pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)?$"
+			  placeholder="i.e. Enter your Name Here"
+		  >
+		  <ul class="error-message">
+			  <li>Must contain at least two names (first and last).</li>
+			  <li>Must contain a space.</li>
+		  </ul>
+	   </span>
+       <hr>
+       <span id="form-control-hidden"></span>
+	   <hr>                                                         
+	   <div id="form-btn-group">
+		  <input class="btn" id="login-form-btn-group-reset" type="reset">
+		  <input class="btn" id="login-form-btn-group-btn" type="submit" value="Submit">
+	   </div>
+	</fieldset>
+ </form>
+ <form id="login-form" class="hidden" name="login-form">
+	<fieldset>
+	   <span id="form-control">
+		  <label for="login-form-username">User Name</label>
+          <input
+			 id="login-form-username"
+             name="username"
+             type="text"
+             pattern="^[a-zA-Z][a-zA-Z0-9]{4,}$"
+             placeholder="i.e. Enter your User Name Here"
+          >
+          <ul class="error-message">
+			 <li>Must start with a letter (lowercase or capital).</li>
+             <li>Must have at least five character.</li>
+          </ul>
+       </span>
+       <hr>                                                         
+       <span id="form-control-hidden"></span>
+	   <hr>
+       <div id="form-btn-group">
+          <input class="btn" id="login-form-btn-group-reset" type="reset">
+          <input class="btn" id="login-form-btn-group-btn" type="submit" value="Submit">
+       </div>
+    </fieldset>
+  </form>
+</section>

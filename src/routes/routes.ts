@@ -1,6 +1,7 @@
 import { routesIter } from "./routesIter";
 import { home } from "../controllers/home.js";
 import { about } from "../controllers/about.js";
+import { l_s } from "../controllers/l-s.js";
 import { todosController } from "../controllers/todos.js";
 
 export const routes: routesIter = {
@@ -14,6 +15,11 @@ export const routes: routesIter = {
 		 label: "about",
 		 route: "/about",
 		 controller: about.getIndex
+	  },
+	  {
+		 label: "l-s",
+		 route: "/l-s",
+		 controller: l_s.getIndex
 	  },
    ],
    "todos": [

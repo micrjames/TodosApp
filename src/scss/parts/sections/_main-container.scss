@@ -1,4 +1,4 @@
-@import 'todos', '../../utils/utils';
+@import 'todos', '../../utils/utils', '../login-signup_hdr', '../login-signup';
 
 @mixin main-container($bg-color) {
    font-size: 2rem;
@@ -20,6 +20,19 @@
 	  margin: 5%;
    }
 
+   #signup-login {
+	  width: 75%;
+	  &-hdr {
+		 @extend %hdr;
+	  }
+	  #signup-form {
+		 @include l-s(100%, $main-bg-color);
+	  }
+	  #login-form {
+		 @include l-s(100%, $main-bg-color);
+	  }
+   }
+   
    #todos-wrapper {
 	  @extend %todos;
    }

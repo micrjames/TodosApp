@@ -9,6 +9,10 @@
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 #oops-wrapper {
   display: flex;
   flex-direction: column;
