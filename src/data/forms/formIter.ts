@@ -1,10 +1,3 @@
-export interface ITodo {
-   id: number;
-   title: string;
-   description: string;
-   completed: boolean;
-};
-
 type whichForm = string | string;
 interface ILabel {
 	for: string;

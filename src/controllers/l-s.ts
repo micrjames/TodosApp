@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import path from "path";
 import { utils } from "../utils.js";
-import { forms } from "../data/data.js";
+import { forms } from "../data/forms/forms.js";
 
 export const l_s = {
    getIndex: (_: Request, res: Response) => {

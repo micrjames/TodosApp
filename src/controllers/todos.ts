@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { todos } from "../data/data.js";
+import { todos } from "../data/todos/todos.js";
 import path from "path";
 import { utils } from "../utils.js";
 
