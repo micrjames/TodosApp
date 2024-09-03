@@ -12,7 +12,7 @@
       "prestart": "npx tsc && cp -R ./src/views ./dist/public",
       "start": "nodemon dist/index.js",
       "test": "jest",
-      "clean": "cd ./dist && rm -rf $(ls | grep '[^./public]') && rm -rf ./public/views"
+      "clean": "cd ./dist && rm -rf $(ls | grep '[^./public]') && rm -rf ./public/views && rm ./public/*.js"
    },
    "keywords": [
       "webpack",
