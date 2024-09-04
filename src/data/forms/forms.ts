@@ -27,7 +27,8 @@ export const forms: IForms = {
 			 id: "login-form-password",
 			 name: "password",
 			 type: "password",
-			 pattern: "^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}",
+			 pattern: "^(?!.*[#])(?=.*[A-Z])(?=.*[0-9]).{8,}",
+
 			 placeholder: "i.e. Enter your Password Here"
 		  },
 		  errs: [
@@ -80,7 +81,7 @@ export const forms: IForms = {
             id: "signup-form-password",
             name: "password",
             type: "password",
-            pattern: "^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$",
+            pattern: "^(?!.*[#])(?=.*[A-Z])(?=.*[0-9]).{8,}$",
             placeholder: "i.e. Enter your Password Here"
 		},
 		errs: [
@@ -98,7 +99,7 @@ export const forms: IForms = {
 		   id: "signup-form-password",
 		   name: "confirm_password",
 		   type: "password",
-		   pattern: "^(?!.*[#!])(?=.*[A-Z])(?=.*[0-9]).{8,}$",
+		   pattern: "^(?!.*[#])(?=.*[A-Z])(?=.*[0-9]).{8,}$",
 		   placeholder: "i.e. Confirm your Password Here",
 		},
 		errs: [
@@ -116,7 +117,7 @@ export const forms: IForms = {
 		   id: "signup-form-email",
            name: "email",
            type: "email",
-           pattern: "^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$",
+           pattern: "\{3,}@{4, 8}\.(com|org|net)$",
            placeholder: "i.e. Enter an Email"
 		},
 		errs: [

@@ -6,11 +6,15 @@ const signupState = [signupToggleBtn, signupForm];
 
 if(loginState !== undefined && signupState !== undefined) {
    toggleFormState(loginState, signupState);
-   loginToggleBtn?.addEventListener("click", function() {
+   loginToggleBtn?.addEventListener("click", event => {
+	   event.preventDefault();
 	   toggleFormState(loginState, signupState);
+	   signupForm.reset();
    });
 
-   signupToggleBtn?.addEventListener("click", function() {
+   signupToggleBtn?.addEventListener("click", event => {
+	   event.preventDefault();
 	   toggleFormState(signupState, loginState);
+	   loginForm.reset();
    });
 }

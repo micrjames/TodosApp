@@ -1,25 +1,60 @@
-import express, { Express } from "express";
+import express, { Express, NextFunction, Request, Response } from "express";
 import { pageRoutes } from "./routes/pageRoutes.js";
 import { todosRoutes } from "./routes/todosRoutes.js";
 import { utils } from "./utils.js";
+import { users } from "./data/users/users.js";
 import dotenv from "dotenv";
-import cors from "cors";
 import path from "path";
 
 dotenv.config();
+
+declare global {
+  namespace Express {
+    interface Request {
+      authed: boolean;
+	  user: {
+		 name: string;
+		 username: string;
+		 password: string;
+		 confirm_password: string;
+		 email: string; 
+	  }
+    }
+  }
+}
 
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
-app.use(cors({ origin: `http://localhost:${PORT}`  }));
 app.use(express.static(path.join(utils.__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/", pageRoutes);
 app.use("/todos", todosRoutes);
-   
+
+const authed = (req: Request, _: Response, next: NextFunction) => {
+    req.authed = false;
+    const { username, password } = req.body;
+    const user = users.filter(user => user.username === username).pop();
+	if(user) {
+		req.authed = true;
+		req.user = user;
+	}
+	next();
+};
+
+app.post("/login", authed, (req: Request, res: Response) => {
+	if(req.authed)
+	   res.status(200).render(path.resolve(utils.__dirname, "./public/views/logout.ejs"), {
+		  name: req.user.name
+	   });
+});
+app.post("/signup", (req: Request, _: Response) => {
+	console.log(req.body);
+});
+
 app.listen(PORT, () => {
    console.log(`[server]: Server is running at port: ${PORT}`);
 });

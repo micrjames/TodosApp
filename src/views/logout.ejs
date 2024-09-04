@@ -3,7 +3,9 @@
 	<%-include("./partials/head.ejs");%>
 	<body>
 		<main id="main-wrapper">
-		   <h1 id="dashboard-hdr"></h1>
+		   <%if(name) {%>
+		   <h1 id="dashboard-hdr">Welcome, <%=name%>!</h1>
+		   <%}%>
 		   <section id="button-wrapper">
 			  <a href="/" id="logout">Logout</a>
 		   </section>
