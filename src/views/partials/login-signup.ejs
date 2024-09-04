@@ -1,5 +1,7 @@
-<p id="signup-login-error-message"></p>
 <section id="signup-login">
+  <%if(err_msg) {%>
+  <span id="signup-login-error-message"><%=err_msg%></span>
+  <%}%>
   <header id="signup-login-hdr">
 	   <div id="signup-login-hdr-btn-group">
 		  <button class="btn" id="signup-login-hdr-btn-group-login"><%=login%></button>

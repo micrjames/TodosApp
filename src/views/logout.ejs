@@ -5,10 +5,13 @@
 		<main id="main-wrapper">
 		   <%if(name) {%>
 		   <h1 id="dashboard-hdr">Welcome, <%=name%>!</h1>
-		   <%}%>
-		   <section id="button-wrapper">
-			  <a href="/" id="logout">Logout</a>
+		   <section id="logout-wrapper">
+			  <form id="logout" action="/signout" method="POST">
+				 <input type="hidden" />
+				 <input type="submit" value="Logout" />
+			  </form>
 		   </section>
+		   <%}%>
 		</main>
 	    <%-include("./partials/footer.ejs");%>
 	   <script src="js/init.js" type="module"></script>

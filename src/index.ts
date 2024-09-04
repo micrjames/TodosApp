@@ -5,6 +5,8 @@ import { utils } from "./utils.js";
 import { users } from "./data/users/users.js";
 import dotenv from "dotenv";
 import path from "path";
+import bcrypt from "bcryptjs";
+import { forms } from "./data/forms/forms.js";
 
 dotenv.config();
 
@@ -50,9 +52,23 @@ app.post("/login", authed, (req: Request, res: Response) => {
 	   res.status(200).render(path.resolve(utils.__dirname, "./public/views/logout.ejs"), {
 		  name: req.user.name
 	   });
+	else
+	   res.status(200).render(path.resolve(utils.__dirname, "./public/views/l_s.ejs"), {
+			   err_msg: "user is not registered",
+			   header: "Login/Signup Below",
+			   login: "Login",
+			   signup: "Signup",
+			   forms
+	  });
 });
-app.post("/signup", (req: Request, _: Response) => {
-	console.log(req.body);
+app.post("/signout", (req: Request, res: Response) => {
+   res.status(200).render(path.resolve(utils.__dirname, "./public/views/home.ejs"), {
+	  view: "View Todos",
+	  about: "About Todos"
+   });
+   req.authed = false;
+});
+app.post("/signup", (__: Request, _: Response) => {
 });
 
 app.listen(PORT, () => {
