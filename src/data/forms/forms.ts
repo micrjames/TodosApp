@@ -40,19 +40,38 @@ export const forms: IForms = {
 	 ],
 	 signup: [{
 		  label: {
-			 for: "signup-form-name",
-			 text: "Name"
+			 for: "signup-form-first-name",
+			 text: "First Name"
 		  },
 		  input: {
-			 id: "signup-form-name",
-			 name: "name",
+			 id: "signup-form-first-name",
+			 name: "first-name",
 			 type: "text",
-			 pattern: "^[a-zA-Z]+(?:\s[a-zA-Z]+)?$",
-			 placeholder: "i.e. Enter your Name Here"
+			 pattern: "^[A-Z][a-z]+(?:\s)?$",
+			 placeholder: "i.e. Enter your First Name Here"
 		  },
 		  errs: [
-			 { msg: "Must contain at least two names (first and last)." },
-			 { msg: "Must contain a space." }
+			 { msg: "Must contain one name." },
+			 { msg: "Must contain only letters." },
+			 { msg: "Must start with a capital letters" },
+		  ]
+	  },
+	  {
+		  label: {
+			 for: "signup-form-last-name",
+			 text: "Last Name"
+		  },
+		  input: {
+			 id: "signup-form-last-name",
+			 name: "last-name",
+			 type: "text",
+			 pattern: "^[A-Z][a-z]+(?:\s)?$",
+			 placeholder: "i.e. Enter your Name Last Here"
+		  },
+		  errs: [
+			 { msg: "Must contain one name." },
+			 { msg: "Must contain only letters." },
+			 { msg: "Must start with a capital letters" },
 		  ]
 	  },
 	  {
@@ -117,7 +136,7 @@ export const forms: IForms = {
 		   id: "signup-form-email",
            name: "email",
            type: "email",
-           pattern: "\{3,}@{4, 8}\.(com|org|net)$",
+           pattern: "\w+{3,}@{4, 8}\.(com|org|net)$",
            placeholder: "i.e. Enter an Email"
 		},
 		errs: [
