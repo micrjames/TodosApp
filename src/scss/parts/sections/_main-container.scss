@@ -23,12 +23,15 @@
    #signup-login {
 	  width: 75%;
 	  &-error-message {
+		 border: 1px solid red;
+		 background-color: lighten(red, 35%);
 		 display: block;
 		 font-size: 1.25rem;
 		 text-align: center;
 		 color: red;
 		 font-style: italic;
 		 margin-bottom: 10px;
+		 padding: 5px;
 	  }
 	  &-hdr {
 		 @extend %hdr;
