@@ -1,4 +1,4 @@
-@import 'todos', '../../utils/utils', '../login-signup_hdr', '../login-signup';
+@import 'todos', '../../utils/utils', '../login-signup_hdr', '../login-signup', '../../utils/res-mq';
 
 @mixin main-container($bg-color) {
    font-size: 2rem;
@@ -10,8 +10,14 @@
    height: 100vh;
 
    h1 {
-	   margin: 10%;
 	   font-size: 1.75rem;
+	   margin: 5%;
+	   @include md {
+		  margin-top: 5%;
+	   }
+	   @include lg {
+		  margin-top: 2%;
+	   }
    }
    h3 {
 	  margin: 5%;
@@ -22,6 +28,12 @@
 
    #signup-login {
 	  width: 75%;
+	  @include md {
+		 width: 60%;
+	  }
+	  @include lg {
+		 width: 40%;
+	  }
 	  &-error-message {
 		 border: 1px solid red;
 		 background-color: lighten(red, 35%);
@@ -36,10 +48,7 @@
 	  &-hdr {
 		 @extend %hdr;
 	  }
-	  #signup-form {
-		 @include l-s(100%, $main-bg-color);
-	  }
-	  #login-form {
+	  #signup-form, #login-form {
 		 @include l-s(100%, $main-bg-color);
 	  }
    }
