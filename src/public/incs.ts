@@ -11,6 +11,6 @@ const loginToggleBtn = signupLoginHdrBtnGroup?.children[0];
 const signupToggleBtn = signupLoginHdrBtnGroup?.children[1];
 
 const signupForm = document.forms[0];
-const loginForm = document.forms[1];
+const loginForm = document.forms[1]
 
 export { loginForm, signupForm, loginToggleBtn, signupToggleBtn, signupLoginErrMsg };
