@@ -1,6 +1,11 @@
 <section id="signup-login">
   <%if(err_msg) {%>
   <span id="signup-login-error-message"><%=err_msg%></span>
+  <%} else {%>
+  <span class="required-message">
+     <span class="asterisk"></span>
+     denotes a required field
+  </span>
   <%}%>
   <header id="signup-login-hdr">
 	   <div id="signup-login-hdr-btn-group">

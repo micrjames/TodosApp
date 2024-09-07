@@ -166,6 +166,22 @@ main #signup-login-error-message {
   margin-bottom: 10px;
   padding: 5px;
 }
+main #signup-login .required-message {
+  padding-bottom: 10px;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+main #signup-login .required-message .asterisk::after {
+  content: "*";
+  color: red;
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+}
+main #signup-login-hdr {
+  margin-top: 5px;
+}
 main #signup-login #signup-form, main #signup-login #login-form {
   background-color: #737373;
   width: 100%;
@@ -205,6 +221,9 @@ main #signup-login #signup-form #form-control input[type=text]::placeholder, mai
 main #signup-login #signup-form #form-control input[type=text]:focus:valid, main #signup-login #signup-form #form-control input[type=password]:focus:valid, main #signup-login #signup-form #form-control input[type=email]:focus:valid, main #signup-login #login-form #form-control input[type=text]:focus:valid, main #signup-login #login-form #form-control input[type=password]:focus:valid, main #signup-login #login-form #form-control input[type=email]:focus:valid {
   color: white;
   caret-color: white;
+}
+main #signup-login #signup-form #form-control input[type=text]:focus:valid ~ .error-message li, main #signup-login #signup-form #form-control input[type=password]:focus:valid ~ .error-message li, main #signup-login #signup-form #form-control input[type=email]:focus:valid ~ .error-message li, main #signup-login #login-form #form-control input[type=text]:focus:valid ~ .error-message li, main #signup-login #login-form #form-control input[type=password]:focus:valid ~ .error-message li, main #signup-login #login-form #form-control input[type=email]:focus:valid ~ .error-message li {
+  list-style-type: "✔";
 }
 main #signup-login #signup-form #form-control input[type=text]:focus:invalid, main #signup-login #signup-form #form-control input[type=password]:focus:invalid, main #signup-login #signup-form #form-control input[type=email]:focus:invalid, main #signup-login #login-form #form-control input[type=text]:focus:invalid, main #signup-login #login-form #form-control input[type=password]:focus:invalid, main #signup-login #login-form #form-control input[type=email]:focus:invalid {
   border-color: red;

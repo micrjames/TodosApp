@@ -18,7 +18,7 @@
 		   grid-column: 1 / 2;
 	   }
 	   .required::before {
-		  content: "*";
+		  content: "\002a";
 		  color: red;
 		  position: relative;
 		  top: 4px;
@@ -67,6 +67,7 @@
 			 background-color: lighten($error-color, 35%);
 			 list-style-type: "\2718";
 			 list-style-position: inside;
+
 			 &::marker {
 				font-size: 1.5rem;
 			 }

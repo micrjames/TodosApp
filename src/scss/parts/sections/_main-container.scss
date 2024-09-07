@@ -45,7 +45,23 @@
 		 margin-bottom: 10px;
 		 padding: 5px;
 	  }
+	  .required-message {
+		 padding-bottom: 10px;
+		 margin-left: 1rem;
+		 font-size: 1.25rem;
+		 font-style: italic;
+		 .asterisk {                                                                       
+			&::after {
+			   content: "\002a";
+			   color: red;
+			   position: relative;
+			   top: 4px;
+			   margin-right: 2px;
+			}
+         }        
+      }   
 	  &-hdr {
+		 margin-top: 5px;
 		 @extend %hdr;
 	  }
 	  #signup-form, #login-form {
