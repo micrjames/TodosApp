@@ -249,13 +249,13 @@ main #signup-login #signup-form #form-control .error-message, main #signup-login
   font-style: italic;
   list-style-position: inside;
   border: 1px solid red;
-  background-color: #ffe6e6;
+  background-color: linen;
   padding: 5px 10px;
 }
 main #signup-login #signup-form #form-control .error-message li, main #signup-login #login-form #form-control .error-message li {
   font-size: 1rem;
   padding-top: 0.75rem;
-  background-color: #ffe6e6;
+  background-color: linen;
   list-style-position: inside;
 }
 main #signup-login #signup-form #form-control .error-message li.x, main #signup-login #login-form #form-control .error-message li.x {

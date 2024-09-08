@@ -73,13 +73,13 @@
 		  font-style: italic;
 		  list-style-position: inside;
 		  border: 1px solid $error-color;
-		  background-color: $error-bg-color;
+		  background-color: linen; 
 		  padding: 5px 10px;
 
 		  li {
 			 font-size: 1rem;
 			 padding-top: 0.75rem;
-			 background-color: $error-bg-color;
+			 background-color: linen;
 			 list-style-position: inside;
 
 			 &.x {

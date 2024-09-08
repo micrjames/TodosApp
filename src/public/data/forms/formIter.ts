@@ -10,8 +10,8 @@ interface IInput {
 	pattern: string;
 	placeholder: string;
 }
-type errMsg = Record<'msg' | 'pattern', string>;
-interface IFormControl {
+export type errMsg = Record<'msg' | 'pattern', string>;
+export interface IFormControl {
     label: ILabel;
 	input: IInput;
 	errs: errMsg[];
