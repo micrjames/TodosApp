@@ -10,7 +10,8 @@ export const l_s = {
          header: "Login/Signup Below",
 		 login: "Login",
 		 signup: "Signup",
-		 forms
+		 forms,
+		 required_msg: "denotes a field needing input"
 	  });
    }
 };  

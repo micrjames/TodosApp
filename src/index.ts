@@ -15,7 +15,8 @@ declare global {
     interface Request {
       authed: boolean;
 	  user: {
-		 name: string;
+		 first_name: string;
+		 last_name: string;
 		 username: string;
 		 password: string;
 		 confirm_password: string;
@@ -50,7 +51,8 @@ const authed = (req: Request, _: Response, next: NextFunction) => {
 app.post("/login", authed, (req: Request, res: Response) => {
 	if(req.authed)
 	   res.status(200).render(path.resolve(utils.__dirname, "./public/views/logout.ejs"), {
-		  name: req.user.name
+		  first_name: req.user.first_name,
+		  last_name: req.user.last_name
 	   });
 	else
 	   res.status(200).render(path.resolve(utils.__dirname, "./public/views/l_s.ejs"), {

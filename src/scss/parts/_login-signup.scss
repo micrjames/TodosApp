@@ -1,6 +1,7 @@
 @import '../utils/utils', '../utils/button';
 
 @mixin l-s($width, $bg-color, $text-color: white, $error-color: red, $font-size: 1.75rem) {
+    $error-bg-color: lighten($error-color, 45%);
     background-color: lighten($bg-color, 20%);
     width: $width;
 	color: $text-color;
@@ -37,6 +38,7 @@
 			   color: $text-color;
 		   }
 		   &:focus:valid {
+			  border-color: black;
 			  color: $text-color;
 			  caret-color: $text-color;
 		   }
@@ -44,7 +46,8 @@
 			  border-color: $error-color;
 			  color: $error-color;
 			  caret-color: $error-color;
-
+		   }
+		   &:focus {
 			  & ~ .error-message {
 				  display: block;
 			  }
@@ -58,15 +61,22 @@
 		  font-style: italic;
 		  list-style-position: inside;
 		  border: 1px solid $error-color;
-		  background-color: lighten($error-color, 35%);
+		  background-color: $error-bg-color;
 		  padding: 5px 10px;
 
 		  li {
 			 font-size: 1rem;
 			 padding-top: 0.75rem;
-			 background-color: lighten($error-color, 35%);
-			 list-style-type: "\2718";
+			 background-color: $error-bg-color;
 			 list-style-position: inside;
+
+			 &.x {
+				list-style-type: "\2718";
+			 }
+			 &.checked {
+				list-style-type: "\2714";
+				color: green;
+			 }
 
 			 &::marker {
 				font-size: 1.5rem;

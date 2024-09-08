@@ -1,8 +1,8 @@
 import { loginForm, signupForm, loginToggleBtn, signupToggleBtn, signupLoginErrMsg } from "./incs.js";
 import { toggleFormState } from "./loginSignup.js";
 
-const loginState = [loginToggleBtn, loginForm];
-const signupState = [signupToggleBtn, signupForm];
+const loginState = [loginToggleBtn, loginForm.form];
+const signupState = [signupToggleBtn, signupForm.form];
 
 if(loginState !== undefined && signupState !== undefined) {
    toggleFormState(loginState, signupState);

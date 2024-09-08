@@ -3,8 +3,8 @@
 	<%-include("./partials/head.ejs");%>
 	<body>
 		<main id="main-wrapper">
-		   <%if(name) {%>
-		   <h1 id="dashboard-hdr">Welcome, <%=name%>!</h1>
+		   <%if(first_name&&last_name) {%>
+		   <h1 id="dashboard-hdr">Welcome, <%=first_name last_name%>!</h1>
 		   <section id="logout-wrapper">
 			  <form id="logout" action="/signout" method="POST">
 				 <input type="hidden" />

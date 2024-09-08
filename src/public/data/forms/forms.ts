@@ -15,12 +15,12 @@ export const forms: IForms = {
 		  },
 		  errs: [
 			 { 
-				msg: "Must start with a letter (lowercase or uppercase).",
+				msg: "Must start with a letter (lowercase or capital).",
 				pattern: "^[a-zA-Z]"
 			 },
 			 { 
-				msg: "Must have at least five characters.",
-				pattern: "^[a-zA-Z]{5}"
+				msg: "Must have at least five characters (letters or numbers).",
+				pattern: "[a-zA-Z0-9]{5}"
 			 }
 		  ]
 	  },
