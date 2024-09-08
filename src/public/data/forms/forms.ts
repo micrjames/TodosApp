@@ -40,15 +40,15 @@ export const forms: IForms = {
 		  errs: [
 			 { 
 				msg: "Must have more than seven characters.",
-				pattern: ""
+				pattern: "[^#]{7}"
 			 },
 			 { 
 				msg: "Must have at least one digit.",
-				pattern: ""
+				pattern: "[0-9]{1}"
 			 },
 			 { 
 				msg: "Must contain at least uppercase character.",
-				pattern: ""
+				pattern: "[A-Z]{1}"
 			 }
 		  ]
 	  }

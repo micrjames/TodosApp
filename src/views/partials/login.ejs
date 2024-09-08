@@ -11,6 +11,9 @@
 		  placeholder="<%=formControl.input.placeholder%>"
 		  required
 	   >
+	   <%if(formControl.input.name=="password") {%>
+	   <div class="toggle_password hide"></div>
+	   <%}%>
 	   <ul class="error-message">
 		  <%formControl.errs.forEach(err => {%>
 			 <li class="x">

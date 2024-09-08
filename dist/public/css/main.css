@@ -231,6 +231,16 @@ main #signup-login #signup-form #form-control input[type=text]:focus:invalid, ma
 main #signup-login #signup-form #form-control input[type=text]:focus ~ .error-message, main #signup-login #signup-form #form-control input[type=password]:focus ~ .error-message, main #signup-login #signup-form #form-control input[type=email]:focus ~ .error-message, main #signup-login #login-form #form-control input[type=text]:focus ~ .error-message, main #signup-login #login-form #form-control input[type=password]:focus ~ .error-message, main #signup-login #login-form #form-control input[type=email]:focus ~ .error-message {
   display: block;
 }
+main #signup-login #signup-form #form-control .toggle_password.hide::before, main #signup-login #login-form #form-control .toggle_password.hide::before {
+  content: "☐";
+}
+main #signup-login #signup-form #form-control .toggle_password.show::before, main #signup-login #login-form #form-control .toggle_password.show::before {
+  content: "☒";
+}
+main #signup-login #signup-form #form-control .toggle_password::after, main #signup-login #login-form #form-control .toggle_password::after {
+  content: "Show Text";
+  margin-left: 2px;
+}
 main #signup-login #signup-form #form-control .error-message, main #signup-login #login-form #form-control .error-message {
   grid-column: 2/-1;
   display: none;
@@ -273,7 +283,7 @@ main #signup-login #signup-form #form-control .error-message li:last-child hr, m
 main #signup-login #signup-form #form-control-hidden, main #signup-login #login-form #form-control-hidden {
   display: block;
   width: 100%;
-  height: 312px;
+  height: 285px;
 }
 main #signup-login #signup-form #form-btn-group, main #signup-login #login-form #form-btn-group {
   display: grid;

@@ -53,6 +53,18 @@
 			  }
 		   }
 	   }
+	   .toggle_password {
+		  &.hide::before {
+			 content: '\2610';
+		  }
+		  &.show::before {
+			 content: '\2612';
+		  }
+		  &::after {
+			 content: 'Show Text';
+			 margin-left: 2px;
+		  }
+	   }
 	   .error-message {
 		  grid-column: 2 / -1;
 		  display: none;
@@ -101,7 +113,7 @@
 	#form-control-hidden {
 	   display: block;
 	   width: 100%;
-	   height: 312px;
+	   height: 285px;
 	}
 	#form-btn-group {
 	   display: grid;
