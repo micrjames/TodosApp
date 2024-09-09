@@ -3,10 +3,10 @@
 	<%-include("./partials/head.ejs");%>
 	<body>
 		<main id="main-wrapper">
-		   <%if(first_name&&last_name) {%>
-		   <h1 id="dashboard-hdr">Welcome, <%=first_name last_name%>!</h1>
+		   <%if(first_name && last_name) {%>
+		   <h1 id="dashboard-hdr">Welcome,&nbsp;<%=first_name%>&nbsp;<%=last_name%>!</h1>
 		   <section id="logout-wrapper">
-			  <form id="logout" action="/signout" method="POST">
+			  <form id="logout" action="/logout" method="POST">
 				 <input type="hidden" />
 				 <input type="submit" value="Logout" />
 			  </form>
@@ -14,6 +14,5 @@
 		   <%}%>
 		</main>
 	    <%-include("./partials/footer.ejs");%>
-	   <script src="js/init.js" type="module"></script>
 	</body>
 </html>

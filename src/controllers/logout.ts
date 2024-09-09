@@ -5,7 +5,8 @@ import { utils } from "../utils.js";
 export const logout = {
    getIndex: (_: Request, res: Response) => {
 	  res.status(200).render(path.resolve(utils.__dirname, "./public/views/logout.ejs"), {
-		name: ""
+		first_name: "",
+		last_name: ""
 	  });
    }
 };  
