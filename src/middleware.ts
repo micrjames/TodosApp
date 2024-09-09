@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { User } from "./data/users/userIter.js";
+import bcrypt from "bcryptjs";
 
 export const authed = (users: User[]) => { 
     return (req: Request, _: Response, next: NextFunction) => {
