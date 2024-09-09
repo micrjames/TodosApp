@@ -5,6 +5,10 @@ export const utils = {
 	   context.classList.remove(currClass);
 	   context.classList.add(newClass);
    },
+   toggleClassOn: (context: Element | null, check: boolean, className: string) => {
+	   if(check) context?.classList.remove(className);
+	   else context?.classList.add(className);
+   },
    checkAgainstRegExp: (pattern: string, value: string, cb: (passesTest: boolean) => void) => {
 	   const regExp = new RegExp(pattern);
 	   const passesTest = regExp.test(value);
@@ -36,22 +40,13 @@ export const utils = {
 	   utils.setPanel(context, color);
    },
    changeOnRegExpPass: (passed: boolean, context: HTMLElement) => {
-	   let currClass: string;
-	   let nextClass: string;
-	   if(passed) {
-		  currClass = 'x';
-		  nextClass = 'checked';
-	   } else {
-		  currClass = 'checked';
-		  nextClass = 'x';
-	   }
+	   let [currClass, nextClass] = passed ? ['x', 'checked'] : ['checked', 'x'];
 	   utils.changeClass(context, currClass, nextClass);
    },
    doOnInput: (input: HTMLFormElement, context: HTMLElement, errs: errMsg[]) => {
 	   const value = input.value;
 	   const label = input.previousElementSibling;
-	   if(value) label?.classList.remove('required');
-	   else label?.classList.add('required');
+	   utils.toggleClassOn(label, value, 'required');
 	   errs.forEach((inputErr, idx) => {
 		  const errorMsgListItem = context?.children[idx] as HTMLElement;
 		  utils.checkAgainstRegExp(inputErr.pattern, value, passed => {

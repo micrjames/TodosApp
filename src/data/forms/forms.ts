@@ -125,7 +125,7 @@ export const forms: IForms = {
 			  pattern: ""
 		   },
 		   { 
-			  msg: "Must have at least five character.",
+			  msg: "Must have at least five characters.",
 			  pattern: ""
 		   }
 		]
@@ -193,7 +193,7 @@ export const forms: IForms = {
 		   id: "signup-form-email",
            name: "email",
            type: "email",
-           pattern: "\w+{3,}@{4, 8}\.(com|org|net)$",
+           pattern: "\w+@\w{4, 8}\.(com|org|net)$",
            placeholder: "i.e. Enter an Email"
 		},
 		errs: [
@@ -207,6 +207,10 @@ export const forms: IForms = {
 		   },
 		   { 
 			  msg: "Must, then, contain the @ symbol.",
+			  pattern: ""
+		   },
+		   { 
+			  msg: "Must, then, contain word characters.",
 			  pattern: ""
 		   },
 		   { 

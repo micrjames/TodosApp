@@ -14,7 +14,11 @@ const signupLoginHdrBtnGroup = signupLoginHdr?.children.namedItem("signup-login-
 const loginToggleBtn = signupLoginHdrBtnGroup?.children[0];
 const signupToggleBtn = signupLoginHdrBtnGroup?.children[1];
 
-const signupForm = new Form(document.forms[0]);
+const signupForm = new Form(document.forms[0], inputs => {
+	inputs.forEach((input, idx) => {
+	   utils.doInput(idx, input, forms.signup);
+	});
+});
 const loginForm = new Form(document.forms[1], inputs => {
 	inputs.forEach((input, idx) => {
 	   utils.doInput(idx, input, forms.login);

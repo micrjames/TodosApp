@@ -68,15 +68,15 @@ export const forms: IForms = {
 		  errs: [
 			 { 
 				msg: "Must contain one name.",
-				pattern: ""
+				pattern: "^[a-zA-Z]+(?:\s)?$"
 			 },
 			 { 
 				msg: "Must contain only letters.",
-				pattern: ""
+				pattern: "[a-zA-Z]+$"
 			 },
 			 { 
 				msg: "Must start with a capital letters",
-				pattern: ""
+				pattern: "^[A-Z]"
 			 },
 		  ]
 	  },
@@ -95,15 +95,15 @@ export const forms: IForms = {
 		  errs: [
 			 { 
 				msg: "Must contain one name.",
-				pattern: ""
+				pattern: "^[a-zA-Z]+(?:\s)?$"
 			 },
 			 { 
 				msg: "Must contain only letters.",
-				pattern: ""
+				pattern: "[a-zA-Z]+$"
 			 },
 			 { 
 				msg: "Must start with a capital letters",
-				pattern: ""
+				pattern: "^[A-Z]"
 			 },
 		  ]
 	  },
@@ -120,14 +120,14 @@ export const forms: IForms = {
            placeholder: "i.e. Enter your User Name Here",
 		},
 		errs: [
-		   { 
-			  msg: "Must start with a letter (lowercase or capital).",
-			  pattern: ""
-		   },
-		   { 
-			  msg: "Must have at least five character.",
-			  pattern: ""
-		   }
+		  { 
+			 msg: "Must start with a letter (lowercase or capital).",
+			 pattern: "^[a-zA-Z]"
+		  },
+		  { 
+			 msg: "Must have at least five characters (letters or numbers).",
+			 pattern: "[a-zA-Z0-9]{5}"
+		  }
 		]
 	  },
 	  {
@@ -143,18 +143,18 @@ export const forms: IForms = {
             placeholder: "i.e. Enter your Password Here"
 		},
 		errs: [
-		   { 
-			  msg: "Must have more than seven characters.",
-			  pattern: ""
-		   },
-		   { 
-			  msg: "Must have at least one digit.",
-			  pattern: ""
-		   },
-		   { 
-			  msg: "Must contain at least uppercase character.",
-			  pattern: ""
-		   }
+			{ 
+			   msg: "Must have more than seven characters.",
+			   pattern: "[^#]{7}"
+			},
+			{ 
+			   msg: "Must have at least one digit.",
+			   pattern: "[0-9]{1}"
+			},
+			{ 
+			   msg: "Must contain at least uppercase character.",
+			   pattern: "[A-Z]{1}"
+			}
 		]
 	  },
 	  {
@@ -170,18 +170,18 @@ export const forms: IForms = {
 		   placeholder: "i.e. Confirm your Password Here",
 		},
 		errs: [
-		   { 
-			  msg: "Must have more than seven characters",
-			  pattern: ""
-		   },
-		   { 
-			  msg: "Must have at least one digit.",
-			  pattern: ""
-		   },
-		   { 
-			  msg: "Must contain at least uppercase character.",
-			  pattern: ""
-		   }
+			{ 
+			   msg: "Must have more than seven characters.",
+			   pattern: "[^#]{7}"
+			},
+			{ 
+			   msg: "Must have at least one digit.",
+			   pattern: "[0-9]{1}"
+			},
+			{ 
+			   msg: "Must contain at least uppercase character.",
+			   pattern: "[A-Z]{1}"
+			}
 		]
 	  },
 	  {
@@ -199,19 +199,23 @@ export const forms: IForms = {
 		errs: [
 		   { 
 			  msg: "Must contain at least one word character.",
-			  pattern: ""
+			  pattern: "[a-zA-Z]+"
 		   },
 		   { 
 			  msg: "May, then, contain one of the following: +, ., a word character, or a hyphen.",
-			  pattern: ""
+			  pattern: "^[a-zA-Z][+.a-zA-Z-]"
 		   },
 		   { 
 			  msg: "Must, then, contain the @ symbol.",
-			  pattern: ""
+			  pattern: "[+.a-zA-Z-]@"
 		   },
+		   {                                                                        
+			  msg: "Must, then, contain word characters.",
+			  pattern: "@\[a-z]\."
+           }, 
 		   { 
 			  msg: "Then, finally, must contain a series of extension characters following a . symbol.",
-			  pattern: ""
+			  pattern: "(com|org|net)$"
 		   }
 		]
 	  }
