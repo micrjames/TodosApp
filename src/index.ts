@@ -1,10 +1,10 @@
 import express, { Express } from "express";
+import { User } from "./data/users/userIter.js";
 import { authed } from "./middleware.js";
 import { pageRoutes } from "./routes/pageRoutes.js";
 import { todosRoutes } from "./routes/todosRoutes.js";
 import { l_s } from "./controllers/l-s.js";
 import { utils } from "./utils.js";
-import { users } from "./data/users/users.js";
 import dotenv from "dotenv";
 import path from "path";
 
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use("/", pageRoutes);
 app.use("/todos", todosRoutes);
 
-app.post("/login", authed(users), l_s.postLogin);
+app.post("/login", authed, l_s.postLogin);
 app.post("/logout", l_s.postLogout);
 app.post("/signup", l_s.postSignup);
 
